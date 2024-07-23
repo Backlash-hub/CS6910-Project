@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?xml-model href="Casino.fxml"?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.cs6910.crazy8s.view.CasinoCodeBehind">
+
+	<children>
+		<HBox fx:id="playerBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="38.0" prefHeight="190.0" prefWidth="614.0" spacing="5.0" style="-fx-background-color: #c0c0c0;">
+			<effect>
+				<Glow />
+			</effect>
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+		</HBox>
+
+		<VBox fx:id="stockpileBox" alignment="CENTER" layoutX="257.0" layoutY="238.0" prefHeight="190.0" prefWidth="130.0" spacing="5.0" style="-fx-background-color: #c0c0c0;">
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+		</VBox>
+
+		<Button fx:id="playCardButton" layoutX="78.0" layoutY="299.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="135.0" text="Play Card" />
+		<Button fx:id="drawACard" layoutX="425.0" layoutY="299.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="135.0" text="Draw Card" />
+		<Button fx:id="playAgain" layoutX="270.0" layoutY="466.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="103.0" text="New Game" />
+		<Label layoutX="10.0" layoutY="439.0" text="Games Played: " />
+		<Label fx:id="gamesPlayedLabel" layoutX="103.0" layoutY="439.0" prefHeight="17.0" prefWidth="44.0" textFill="WHITE" />
+		<Label layoutX="11.0" layoutY="470.0" text="Human Wins: " />
+		<Label fx:id="humanWinsLabel" layoutX="103.0" layoutY="469.0" prefHeight="17.0" prefWidth="44.0" textFill="WHITE" />
+		<Label layoutX="11.0" layoutY="503.0" text="ComputerWins:" />
+		<Label fx:id="computerWinsLabel" layoutX="103.0" layoutY="504.0" prefHeight="17.0" prefWidth="44.0" textFill="WHITE" />
+		<Label layoutX="14.0" layoutY="531.0" text="Tied Games:" />
+      	<Label fx:id="tiedGamesLabel" layoutX="103.0" layoutY="531.0" prefHeight="17.0" prefWidth="44.0" textFill="WHITE" />
+		<MenuBar prefHeight="28.0" prefWidth="634.0">
+			<menus>
+				<Menu mnemonicParsing="true" text="_File">
+					<items>
+						<MenuItem fx:id="saveMenuItem" mnemonicParsing="true" text="_Save" />
+						<MenuItem fx:id="loadMenuItem" mnemonicParsing="true" text="_Load" />
+					</items>
+				</Menu>
+            <Menu mnemonicParsing="true" text="_Info">
+              <items>
+                <MenuItem fx:id="aboutMenuItem" mnemonicParsing="true" text="_About" />
+                <MenuItem fx:id="helpMenuItem" mnemonicParsing="true" text="_Help" />
+              </items>
+            </Menu>
+			</menus>
+		</MenuBar>
+		<Label layoutX="434.0" layoutY="368.0" text="Cards left in the deck:" />
+		<Label fx:id="deckSizeLabel" layoutX="477.0" layoutY="385.0" prefHeight="17.0" prefWidth="32.0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="13.0" />
+			</font>
+		</Label>
+     
+	</children>
+</AnchorPane>
